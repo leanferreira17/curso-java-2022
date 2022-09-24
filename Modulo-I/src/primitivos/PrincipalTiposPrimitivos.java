@@ -15,39 +15,51 @@ public class PrincipalTiposPrimitivos {
 
         */
 
+        /* Para imprimir en la consola y poder comprobar el valor de una variable
+        utilizamos la siguiente sintaxis:
+
+        System.out.println();
+
+        Dentro de este método podemos agregar una cadena de caracteres que nos permita detallar lo
+        que se está imprimiendo:
+
+        System.out.println("El valor de la variable es:" + variable);
+
+        */
+
         // byte
-        byte b = -122;
-        System.out.println(b);
+        byte edadDelInfante = 1;
+        System.out.println("La edad del infante es: " + edadDelInfante);
 
         // short
-        short cantidadDePueblosDeCordoba = 13764;
-        System.out.println(cantidadDePueblosDeCordoba);
+        short edadDeLaPersonaAdulta = 67;
+        System.out.println("La edad de la persona adulta es: " + edadDeLaPersonaAdulta);
 
         // int
-        int cantidadDeArticulos; // declaración de variable
+        int cantidadDe; // declaración de variable
         cantidadDeArticulos = 13465; // inicialización una variable
 
         int cantidadDeArticulosVendidos = 45; // declaración e inicialización en un solo paso
 
-        System.out.println(cantidadDeArticulos);
-        System.out.println(cantidadDeArticulosVendidos);
+        System.out.println("Cantidad de articulos: " + cantidadDeArticulos);
+        System.out.println("Cantidad de articulos vendidos: " + cantidadDeArticulosVendidos);
 
         // long
-        long cantidadDeHabitantesEnArgentina = 9223372036854775807L;
-        System.out.println(cantidadDeHabitantesEnArgentina);
+        long cantidadDeHabitantesEnArgentina = 50000000L;
+        System.out.println("Habitantes del territorio argentino: " + cantidadDeHabitantesEnArgentina);
         //System.out.println("Maximo valor para Long: " + Long.MAX_VALUE);
 
         // float
         float distanciaEntreBuenosAiresYCordobaEnKilometros = 699.45F;
-        System.out.println(distanciaEntreBuenosAiresYCordobaEnKilometros);
+        System.out.println("Distancia entre Bs As y Cba (en kms): " + distanciaEntreBuenosAiresYCordobaEnKilometros);
 
         // double
         double pesoDeUnAutomovilPromedio = 2987.4765D;
-        System.out.println(pesoDeUnAutomovilPromedio);
+        System.out.println("Peso promedio de un automovil: " + pesoDeUnAutomovilPromedio);
 
         // char
         char primeraLetraDelAlfabetoEnMayúscula = 'A';
-        System.out.println(primeraLetraDelAlfabetoEnMayúscula);
+        System.out.println("Primera letra del alfabeto (en mayúscula): " + primeraLetraDelAlfabetoEnMayúscula);
 
         // boolean
         boolean esCovidPositivo = true;
