@@ -26,6 +26,11 @@ public class Pc {
 
     }
 
+    public int calcularAlgo() {
+        int variableLocal = 8;
+        return variableLocal + 1;
+    }
+
     public float getPrecioTotal() {
         return precio * indiceDeInflacion;
     }
