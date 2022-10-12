@@ -29,6 +29,7 @@ public class Main {
         System.out.println("Es presencial (true o false):");
 
         boolean esPresencial = scanner.nextBoolean();
+        scanner.nextLine(); // fix
 
         // creamos la instancia de Curso
         Curso curso = new Curso(cantidadDeAlumnos, duracionDelCurso, esPresencial, nombreDelCurso);
@@ -38,8 +39,7 @@ public class Main {
 
         System.out.println("Ahora cargue el 2do curso");
         System.out.println("Ingrese nombre del curso: ");
-
-        scanner.next();
+        
         nombreDelCurso = scanner.nextLine(); // capturar el nombre del curso y pisa lo anterior
 
         System.out.println("Ingrese cantidad de alumnos: ");
