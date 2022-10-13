@@ -3,6 +3,16 @@ package app;
 public class Curso {
     private short cantidadDeAlumnos;
 
+    @Override
+    public String toString() {
+        return "Curso{" +
+                "cantidadDeAlumnos=" + cantidadDeAlumnos +
+                ", duracionDelCurso=" + duracionDelCurso +
+                ", esPresencial=" + esPresencial +
+                ", nombreDelCurso='" + nombreDelCurso + '\'' +
+                '}';
+    }
+
     public short getCantidadDeAlumnos() {
         return cantidadDeAlumnos;
     }

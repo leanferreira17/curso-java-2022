@@ -3,10 +3,35 @@ public class Principal {
 
         // estructura if
 
+        // primitivos
+        int a;
+        float b;
+        long c;
+
+        // object
+        String f;
+
         // wrappers
+        // int -> Integer
+        // long -> Long
+
         Integer edadDeLaPersona = new Integer(18);
+        Long altura = new Long(12L);
+
         Integer edadMinimaParaObtenerLaLicenciaDeConducirObj = new Integer(18);
 
+
+        if (5 == 5) {
+            System.out.println("La condicion es verdadera");
+        } else if (5 == 5) {
+            System.out.println("La condicion es verdadera, 5 == 5");
+        } else if (6 > 8) {
+            System.out.println("Las condiciones son falsas");
+        } else {
+            //
+        }
+
+        /*
         int edad = 18;
         int edadMinimaParaObtenerLaLicenciaDeConducir = 18;
 
@@ -34,6 +59,8 @@ public class Principal {
                 break;
             default:
                 System.out.println("Entro por default");
-        }
+        } */
     }
+
+
 }

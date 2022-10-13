@@ -3,11 +3,13 @@ public class PrincipalBucles {
         // for
         // lo usamos cuando conocemos la cantidad de iteraciones a realizar
 
-        int arreglo [] = {1, 2, 3, 4, 5, 6};
+        int[] arreglo = {1, 2, 3, 4, 5, 6};
         int acumulador = 0;
 
-        for (int i = 0 ; i < arreglo.length; i++) {
-            acumulador += arreglo[i];
+        // i++ -> i = i + 1
+
+        for (int i = 0; i < arreglo.length; i = i + 1) {
+            acumulador = acumulador + arreglo[i];
         }
 
         System.out.println("La suma es " + acumulador);

@@ -11,22 +11,34 @@ public class Main {
 
         // definimos un array de 2 elementos porque sabemos la cantidad total que queremos persistir
 
-        Curso[] arrayDeCursos = new Curso[2];
+        imprimirMensaje("Bienvenido");
+        imprimirMensaje("Ingrese la cantidad de cursos que desea crear: ");
 
-        System.out.println("Bienvenido");
-        System.out.println("Ingrese nombre del curso: ");
+        // cantidadDeCursos > 10 o < 1 -> "No se pueden crear cursos para los valores ingresados"
+
+        short cantidadDeCursos = scanner.nextShort();
+
+        if (cantidadDeCursos > 10) {
+            imprimirMensaje("No se pueden crear cursos para los valores ingresados");
+        } else if (cantidadDeCursos < 1) {
+            imprimirMensaje("No se pueden crear cursos para los valores ingresados");
+        }
+
+        Curso[] arrayDeCursos = new Curso[cantidadDeCursos];
+
+        imprimirMensaje("Ingrese nombre del curso: ");
 
         String nombreDelCurso = scanner.nextLine(); // capturar el nombre del curso
 
-        System.out.println("Ingrese cantidad de alumnos: ");
+        imprimirMensaje("Ingrese cantidad de alumnos: ");
 
         short cantidadDeAlumnos = scanner.nextShort(); // captura la cantidad de alumnos
 
-        System.out.println("Duración del curso (dias): ");
+        imprimirMensaje("Duración del curso (dias): ");
 
         int duracionDelCurso = scanner.nextInt(); // captura la duración del curso en dias
 
-        System.out.println("Es presencial (true o false):");
+        imprimirMensaje("Es presencial (true o false):");
 
         boolean esPresencial = scanner.nextBoolean();
         scanner.nextLine(); // fix
@@ -37,20 +49,20 @@ public class Main {
         // asigno el 1er curso al array
         arrayDeCursos[0] = curso;
 
-        System.out.println("Ahora cargue el 2do curso");
-        System.out.println("Ingrese nombre del curso: ");
+        imprimirMensaje("Ahora cargue el 2do curso");
+        imprimirMensaje("Ingrese nombre del curso: ");
         
         nombreDelCurso = scanner.nextLine(); // capturar el nombre del curso y pisa lo anterior
 
-        System.out.println("Ingrese cantidad de alumnos: ");
+        imprimirMensaje("Ingrese cantidad de alumnos: ");
 
         cantidadDeAlumnos = scanner.nextShort(); // captura la cantidad de alumnos
 
-        System.out.println("Duración del curso (dias): ");
+        imprimirMensaje("Duración del curso (dias): ");
 
         duracionDelCurso = scanner.nextInt(); // captura la duración del curso en dias
 
-        System.out.println("Es presencial (true o false):");
+        imprimirMensaje("Es presencial (true o false):");
 
         esPresencial = scanner.nextBoolean();
 
@@ -59,16 +71,12 @@ public class Main {
 
         arrayDeCursos[1] = curso2;
 
-        System.out.println("Ahora seleccione cual curso desea mostrar: 1 o 2?");
+        imprimirMensaje("Ahora seleccione cual curso desea mostrar: 1 o 2?");
         int indiceDelCursoAMostrar = scanner.nextInt();
 
         Curso cursoSeleccionado = arrayDeCursos[indiceDelCursoAMostrar - 1]; // [0, 1] n = 2
 
-        System.out.println("Detalles del curso creado:");
-        System.out.println("Nombre: " + cursoSeleccionado.getNombreDelCurso());
-        System.out.println("Cantidad de alumnos: " + cursoSeleccionado.getCantidadDeAlumnos());
-        System.out.println("Duracion (dias): " + cursoSeleccionado.getDuracionDelCurso());
-        System.out.println("Es presencial? " + cursoSeleccionado.esPresencial());
+        imprimirDetalle(cursoSeleccionado);
 
         /*System.out.println("Ingrese nueva cantidad de alumnos: ");
 
@@ -80,6 +88,15 @@ public class Main {
         System.out.println("Cantidad de alumnos: " + curso.getCantidadDeAlumnos());
         System.out.println("Duracion (dias): " + curso.getDuracionDelCurso());
         System.out.println("Es presencial? " + curso.esPresencial());*/
+    }
+
+    public static void imprimirMensaje(String mensaje) {
+        System.out.println(mensaje);
+    }
+
+    public static void imprimirDetalle(Curso cursoSeleccionado) {
+        System.out.println("Detalles del curso creado:");
+        System.out.println(cursoSeleccionado.toString());
     }
 
     public static void persistirEnMemoria() {
