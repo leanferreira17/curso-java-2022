@@ -12,12 +12,45 @@ public class PrincipalBucles {
             acumulador = acumulador + arreglo[i];
         }
 
-        System.out.println("La suma es " + acumulador);
+
+        // Decremento
+        int[] arregloDecremento = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        // i-- -> i = i - 1
+
+        for (int i = arregloDecremento.length - 1; i > - 1; i = i - 1) {
+            System.out.println(arregloDecremento[i]);
+        }
+
+
+
+        // Imprimir solo valores pares
+
+        int[] arregloPares = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        for (int y = 1; y < arregloPares.length; y = y + 2) {
+            System.out.println(arregloPares[y]);
+        }
+
+        for (double y = 4.56; y <= 5.01; y = y + 0.01) {
+            System.out.println(y);
+        }
+
+        // nombres
+        String[] nombres = {"Matias", "Ana", "Pedro", "Laura", "Maria"};
+
+        // edades
+        short[] edades = {23, 43, 67, 42, 11};
+
+        // Imprimir en consola cada nombre con su edad
+        // Matias 11, Ana 42, Pedro 67, ...
+
+        // Resolver implementando 2 bucles si se puede
 
         // while
         // lo usamos cuando no conocemos la cantidad de iteraciones a realizar
 
-        int valor = 5;
+        int valor = 17;
 
         while (valor < 10) {
             System.out.println("El valor es: " + valor);
@@ -27,7 +60,7 @@ public class PrincipalBucles {
         // do while
         int valor2 = 5;
 
-        do {
+        do { // por mas que la condicion sea falsa, el cuerpo se ejecutará al menos 1 vez
             System.out.println("El valor es: " + valor2);
             valor2++;
         }
@@ -42,6 +75,7 @@ public class PrincipalBucles {
             System.out.println("El valor de i es: " + i);
         }
 
+
         // uso del continue
         for (int i = 0; i < 10; i++) {
             if (i == 5) {
@@ -51,13 +85,15 @@ public class PrincipalBucles {
         }
 
         // foreach
-        Persona [] arregloDePersonas = {new Persona("Marta"), new Persona("Dario"), new Persona("Adrian")};
+        //Persona [] arregloDePersonas = {new Persona("Marta"), new Persona("Dario"), new Persona("Adrian")};
         // arregloDePersonas[0] = new Persona("Leandro");
         // arregloDePersonas[1] = new Persona("Ana");
 
-        for (Persona persona : arregloDePersonas) {
-            System.out.println(persona.toString());
-        }
+        //for (Persona persona : arregloDePersonas) {
+        //    System.out.println(persona.toString());
+        //}
+
+
 
     }
 }
