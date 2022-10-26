@@ -2,7 +2,7 @@ public class PrincipalBucles {
     public static void main(String[] args) {
         // for
         // lo usamos cuando conocemos la cantidad de iteraciones a realizar
-
+/*
         int[] arreglo = {1, 2, 3, 4, 5, 6};
         int acumulador = 0;
 
@@ -82,7 +82,7 @@ public class PrincipalBucles {
                 continue;
             }
             System.out.println("El valor de i es: " + i);
-        }
+        }*/
 
         // foreach
         //Persona [] arregloDePersonas = {new Persona("Marta"), new Persona("Dario"), new Persona("Adrian")};
@@ -94,6 +94,11 @@ public class PrincipalBucles {
         //}
 
 
+        int[] numberList = {1, 2, 3, 4, 5};
+
+        for (int number : numberList) {
+            //System.out.println(number);
+        }
 
     }
 }
