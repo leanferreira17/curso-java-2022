@@ -1,5 +1,7 @@
 package herencia.polimorfismo;
 
+import java.net.InetAddress;
+
 public class PrincipalPersonas {
 
     public static void main(String[] args) {

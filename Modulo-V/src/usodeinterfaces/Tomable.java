@@ -1,2 +1,4 @@
-package usodeinterfaces;public interface Tomable {
+package usodeinterfaces;
+
+public interface Tomable {
 }

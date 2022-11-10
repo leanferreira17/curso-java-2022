@@ -1,2 +1,7 @@
-package usodeinterfaces;public interface Vendible {
+package usodeinterfaces;
+
+public interface Vendible {
+
+    boolean vender();
+
 }
